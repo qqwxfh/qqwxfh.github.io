@@ -6,7 +6,10 @@
  * @Last Modified by:   Ding Jianlong
  * @Last Modified time: 2019-03-20 23:52:39
  */
-
+action "Run tests" {
+  uses = "franzliedke/gh-action-php@master"
+  runs = "php7.1 vendor/bin/phpunit"
+}
 error_reporting(E_ALL ^ E_NOTICE);//显示除去 E_NOTICE 之外的所有错误信息
 require "config.php";
 require "function.php";
